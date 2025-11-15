@@ -1,0 +1,809 @@
+/* сброс стилей */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* root  */
+:root {
+  --brand-color: #2196f3;
+  --brand-black: #212121;
+  --brand-grey: #757575;
+  --main-font-weight: 700;
+  --dark-background: #2f303a;
+}
+
+.up-block {
+  border-bottom-width: 1px;
+  border-bottom-color:rgba(236, 236, 236, 1);
+  border-bottom-style: solid;
+
+}
+
+.conteiner {
+  width: 1200px;
+  margin: 0 auto;
+  
+}
+
+/* задаем шрифт , цвет и размер всему тексту */
+.all-body {
+  position: relative;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-weight: var(--main-font-weight);
+  color: var(--brand-black);
+}
+
+.all-body ul {
+  list-style-type: none;
+}
+
+/* убираем декорацию при посещении */
+.all-body a:visited {
+  text-decoration: none;
+  color: none;
+}
+
+/* убираем декорацию для всех ссылок */
+.all-body a {
+  text-decoration: none;
+}
+
+/* Задаём размер заголовка "чем мы занимаемся" */
+.all-body h2 {
+  font-size: 36px;
+  text-align: center;
+}
+
+/* задаем размер заголовков "наши приемущества"  */
+.all-body h3 {
+  font-size: 14px;
+}
+
+/* Логотип  */
+/* задает логотипу шрифт и размер */
+.main-logo {
+    width: 160px;
+  padding-left: 15px;
+  margin-top: 24px;
+  margin-right: 93px;
+  margin-bottom: 25px;
+  font-family: Raleway, Arial, Helvetica, sans-serif;
+  font-weight: var(--main-font-weight);
+  font-size: 26px;
+  color: var(--brand-color);
+}
+
+
+.main-logo-f {
+  font-family: Raleway, Arial, Helvetica, sans-serif;
+  font-weight: var(--main-font-weight);
+  font-size: 26px;
+  color: var(--brand-color);
+}
+/* Цвет "WEB" */
+.logo {
+  color: #2196f3;
+}
+/* цвет "STUDIO" вверху */
+.studio-up {
+  color: var(--brand-black);
+}
+
+/* цвет "STUDIO" внизу */
+.studio-down {
+  color: white;
+}
+
+/* Стили header */
+
+/* задаёт стиль текста в навигации */
+.header {
+   display: flex;
+  height: 80px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--brand-black);
+}
+
+.header-navigation {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.nav-contacts-box {
+  margin-top: 32px;
+  margin-bottom: 32px;
+  margin-left: 305px;
+}
+
+.tel-link{
+  display:flex;
+  align-items: center;
+}
+
+.tel-link:hover ,
+.tel-link:focus {
+  color: var(--brand-color);
+  stroke: var(--brand-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.smartphone {
+  height: 16px;
+  width: 10px;
+  margin-right: 10px;
+}
+
+
+.mail {
+  display: flex;
+  align-items: center;
+}
+
+.mail:hover ,
+.mail:focus {
+  color: var(--brand-color);
+  stroke: var(--brand-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.envelope {
+ width: 16px;
+ height: 12px;
+ margin-left: 30px;
+ margin-right: 10px;
+}
+
+
+
+.advantage-box svg {
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+}
+
+
+
+
+
+/* Стиль ссылок  в навигации ПЕРЕНЕСТИ */
+.navigation-link a {
+  color: var(--brand-black);
+  text-decoration: none;
+}
+.navigation-link {
+  display: flex;
+ width: 294px;
+ justify-content: space-between;
+ padding: 0px;
+}
+
+/* обозначение на страницы в навигации - СТУДИЯ   */
+.studio-studio {
+ display: flex;
+ flex-direction: column;
+}
+.studio-studio::after {
+  display: block;
+  content: "";
+  background-image: url(../svg/hover.svg);
+  width: 48px;
+  height: 4px;
+  margin-top: 28px;
+  border-radius: 2px;
+  
+}
+
+/* обозначение на страницы в навигации - ПОРТФОЛИО   */
+
+.portfolio-portfolio {
+ display: flex;
+ flex-direction: column;
+}
+.portfolio-portfolio::after {
+  display: block;
+  content: "";
+  background-image: url(../svg/hover.svg);
+  width: 72px;
+  height: 4px;
+  margin-top: 28px;
+  border-radius: 2px;
+  
+}
+
+
+
+
+/* Стили ховера в навигации */
+
+.navigation-link a:hover , a:focus {
+  color: var(--brand-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+
+
+
+/* стиль контактов в навигации ПЕРЕМЕСТИТЬ */
+
+.nav-contacts-box {
+  display:flex;
+ 
+}
+
+.navigation-contacts {
+  display: flex;
+  padding: 0%;
+ 
+}
+
+.navigation-contacts a {
+  color: var(--brand-grey);
+  text-decoration: none;
+}
+
+
+
+/* блок героя */
+.hero-block {
+  background-image:
+   linear-gradient(to bottom, rgba(47, 48, 58, 0.4)),
+   url(../images/Img-backgrownd1.jpg);
+  background-color: var(--dark-background);
+  height: 600px;
+  width: 1600px;
+  margin: 0% auto;
+  background-position: center;
+ 
+}
+
+/*  стиль кнопки "заказать услугу" */
+.order-button {
+  background-color: var(--brand-color);
+  width: 200px;
+  height: 50px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  margin-left: 500px;
+  margin-top: 30px;
+  border: 0;
+}
+
+/* Титульный текст */
+.page-title {
+  text-align: center;
+  font-size: 44px;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding-top: 200px;
+  color: white;
+}
+
+.advantage-tittle {
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  font-weight: 700;
+}
+
+.advantage-box li {
+  width: 270px;
+
+}
+
+.our-advantage-text  {
+  margin-top: 94px;
+}
+
+.text-advantage p {
+  font-weight: 400 ;
+
+}
+
+.advantage-box {
+  display: flex;
+  gap: 30px;
+  text-align: left;
+  align-items: baseline;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 0%;
+
+}
+
+
+/* стиль основного  текста и секиции "чем мы занимаемся"   */
+.our-advantage-text p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #757575;
+  line-height: 1.7 ;
+}
+
+.what-we-do-title {
+margin-top: 94px;
+margin-bottom: 94px;
+}
+
+.what-we-do-img {
+  display: flex;
+  gap: 30px;
+  padding-top: 50px;
+  padding-left: 15px;
+}
+
+
+/* Чем мы занимаемся ТУМБЫ */
+
+.wwd-tumb>img {
+  display: block;
+}
+
+.wwd-tumb {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.wwd-label {
+  position: absolute;
+  width: 370px;
+  height: 70px;
+  padding-top: 27px;
+  bottom: 0px;
+  background-color: rgba(47, 48, 58, 0.8);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  color: #f5f4fa;
+  text-transform: uppercase;
+  text-align: center;
+  
+}
+
+
+/* Фон секции "наша команда" */
+.our-team {
+  background-color: #f5f4fa;
+}
+
+/* размер текста "наша команда" */
+.our-team-title {
+  font-size: 36px;
+  padding-top: 94px;
+  padding-bottom: 50px;
+}
+
+
+
+/* Задаёт стиль именам людей и именам проектов */
+.worker-name  {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.project-name {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* задаёт стиль специализациям работников и специализациям проектов  */
+.worker-specialization,
+.project-specialization {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--brand-grey);
+}
+
+.our-team-list {
+  display: flex;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 94px;
+  gap: 30px;
+  
+}
+
+
+
+.worker-card{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 4px;
+  box-shadow:
+   0px 1px 3px 0px rgb(0, 0, 0 , 0.12),
+   0px 1px 1px 0px rgb(0, 0, 0 , 0.14),
+   0px 2px 1px 0px rgb(0, 0, 0 , 0.20);
+
+}
+
+
+
+
+
+
+.worker-name {
+  padding-top: 30px;
+  padding-bottom: 10px;
+} 
+
+
+.worker-specialization {
+  margin-bottom: 30px;
+}
+
+.project-specialization {
+  padding-top: 12px;
+  padding-bottom: 24px;
+}
+
+
+.worker-contacts-link {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  padding: 0%;
+  padding-bottom: 32px;
+  
+
+}
+
+.social-svg {
+  height: 44px;
+  width: 44px;
+}
+
+
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  fill:rgba(175, 177, 184, 1);
+}
+
+.social-link:hover,
+ .social-link:focus {
+background-color: var(--brand-color);
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-link:hover .social-svg,
+.social-link:focus .social-svg {
+fill: #f5f4fa;
+transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.title-our-client{
+  margin-top: 94px;
+  margin-bottom: 50px;
+}
+
+
+.our-client {
+  display: flex;
+  padding: 0%;
+  justify-content: space-around;
+  gap: 10px;
+  padding-bottom: 94px;
+}
+
+
+
+.our-client-svg {
+  height: 90px;
+  width: 170px;
+  fill:rgba(175, 177, 184, 1);;
+  border: 20px 63px ;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(175, 177, 184, 1);
+  border-radius: 4px;
+  
+}
+
+.our-client-svg:hover,
+.our-client-svg:focus {
+  border-color: #2196f3;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.our-client-svg:hover,
+.our-client-svg:focus {
+  fill: #2196f3;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+
+
+
+/* задаёт стиль адресу в футере */
+
+.down-contacts {
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+  gap: 9px;
+  padding-bottom: 60px;
+
+}
+
+.footer-address {
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+}
+
+
+
+/* задаёт стиль контактам в футере */
+
+.down-block {
+  background-color: var(--dark-background);
+  
+}
+
+.footer-contacts {
+  text-decoration: none;
+  color: var(--brand-grey);
+}
+
+.footer-contacts:hover ,
+.footer-contacts:focus {
+  color: var(--brand-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+
+.footer-contacts-block {
+  display: flex;
+}
+
+.footer-contacts-link {
+  margin-left: 70px;
+  margin-top: 72px;
+}
+
+.footer-title {
+  font-weight: 700;
+  color: #f5f4fa;
+  text-transform: uppercase;
+  padding-left: 10px;
+  padding-bottom: 20px;
+}
+
+
+.social-link-stydio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(175,	177 ,	184, 0.1);
+  fill: white;
+}
+
+.social-link-stydio:hover,
+.social-link-stydio:focus {
+  background-color: var(--brand-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+}
+
+
+
+
+
+
+/* стили партфолио */
+
+
+.filter-button {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  background-color: white;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--brand-black);
+  background-color: rgba(245, 244, 250, 1);
+  border-radius: 4px;
+  border-width: 0px;
+  cursor: pointer;
+}
+
+.filter-button:hover ,
+.filter-button:focus {
+  color: white;
+  background-color: var(--brand-color);
+  box-shadow:
+  0px 2px 2px 0px rgb(0, 0, 0 , 0.12),
+   0px 1px 2px 0px rgb(0, 0, 0 , 0.08),
+   0px 3px 1px 0px rgb(0, 0, 0 , 0.10);
+   transition:
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  }
+
+
+
+.portfolio-img-box {
+  margin-top: 94px;
+  padding-bottom: 94px;
+}
+
+ /* Портфолио ОВЕРЛЕЙ */
+
+.portfolio-img {
+  display: block;
+}
+
+.portfolio-overley-tumb {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-overley {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px ;
+  background-color: rgba(33, 150, 243, 0.9);
+  top: 0px;
+  left: 0px;
+
+  font-size: 18px;
+  font-weight: 400;
+  text-align: left;
+  line-height: 28px;
+  letter-spacing: 0.3px;
+  color: #f5f4fa;
+
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+}
+
+.project-card:hover .portfolio-overley {
+  transform: translateY(0) ;
+  
+}
+
+
+
+
+
+.project-card:hover,
+.project-card:focus {
+box-shadow:
+1px 4px 6px 0px rgb(0, 0, 0 , 0.16),
+   0px 4px 4px 0px rgb(0, 0, 0 , 0.06),
+   0px 1px 1px 0px rgb(0, 0, 0 , 0.12);
+transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);    
+
+
+}
+
+
+
+
+
+.filter-button-list {
+  display: flex;
+  margin-bottom: 50px;
+  justify-content: center;
+  gap: 8px;
+  padding-bottom: 50px;
+}
+
+.filter-button {
+  padding: 6px 22px 6px 22px;
+}
+
+
+.our-project-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0%;
+  gap: 30px;
+  
+
+}
+
+
+.project-list-text {
+  padding-left: 24px;
+  padding-top: 24px;
+
+  border-left-style:solid ;
+  border-left-color:rgba(238, 238, 238, 1) ;
+  border-left-width: 1px;
+
+  border-right-style:solid ;
+  border-right-color:rgba(238, 238, 238, 1) ;
+  border-right-width: 1px;
+
+  border-bottom-style:solid ;
+  border-bottom-color:rgba(238, 238, 238, 1) ;
+  border-bottom-width: 1.6px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  
+  padding-bottom: 24px;
+
+}
+
+
+
+/* Модальное окно */
+
+.background-modal {
+  position: absolute;
+  background: rgba(0,0 ,0,0.2);
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+ 
+}
+
+
+.is-hidden {
+  visibility: hidden;
+  opacity:0;
+  pointer-events: none;
+}
+
+.window-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+
+  width: 528px;
+  height: 581px;
+  background-color: #f5f4fa;
+  z-index: 3;
+}
+
+
+.close-modal {
+  position: absolute;
+  top: 8px;
+  right: -262px;
+  z-index: 4;
+  cursor: pointer;
+}
