@@ -27,6 +27,8 @@ ol[class] {
   list-style: none;
 }
 
+
+
 /* root  */
 :root {
   --brand-color: #2196f3;
@@ -129,39 +131,118 @@ ol[class] {
   color: var(--brand-black);
 }
 
+.portfolio-link:hover,
+.portfolio-link:focus {
+  color: var(--brand-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contacts-link:hover ,
+.contacts-link:focus {
+  color: var(--brand-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.studio-link:focus,
+.studio-link:hover {
+  color: var(--brand-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-link,
+.studio-link {
+  position: relative;
+}
+
+
+
+.portfolio-link-current,
+.studio-link-current {
+  color: var(--brand-color) !important;
+}
+
+.portfolio-link-current::after,
+.studio-link-current::after {
+  position: absolute;
+  content: "";
+  display: block;
+  left: 0%;
+  top: 46px;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--brand-color);
+  
+
+}
+
+
+
 .header-navigation {
   margin-top: 32px;
   margin-bottom: 32px;
 }
 
 .nav-contacts-box {
-  margin-top: 32px;
-  margin-bottom: 32px;
+  display:flex;
+ 
+}
+
+.navigation-contacts {
+  display: flex;
+  padding: 0%;
+ 
+}
+
+.navigation-contacts a {
+  color: var(--brand-grey);
+  text-decoration: none;
+}
+
+
+.nav-contacts-box {
+  margin-top: 22px;
+  margin-bottom: 22px;
   margin-left: 305px;
 }
 
 .tel-link{
   display:flex;
   align-items: center;
+  padding: 10px 0px 10px 10px;
 }
 
-.tel-link:hover ,
-.tel-link:focus {
-  color: var(--brand-color);
-  stroke: var(--brand-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+
 
 .smartphone {
+  fill: var(--brand-grey);
   height: 16px;
   width: 10px;
   margin-right: 10px;
 }
 
+.tel-link:hover ,
+.tel-link:focus {
+    color: var(--brand-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tel-link:hover .smartphone ,
+.tel-link:focus .smartphone {
+  fill: var(--brand-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+
+
+
+
 
 .mail {
   display: flex;
   align-items: center;
+  padding: 10px 10px 10px 0px;
 }
 
 
@@ -169,12 +250,17 @@ ol[class] {
 .mail:hover ,
 .mail:focus {
   color: var(--brand-color);
-  stroke: var(--brand-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mail:hover .envelope ,
+.mail:focus .envelope {
+  fill: var(--brand-color);
+  transition:  fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
 .envelope {
+  fill: var(--brand-grey);
  width: 16px;
  height: 12px;
  margin-left: 30px;
@@ -198,6 +284,7 @@ ol[class] {
   color: var(--brand-black);
   text-decoration: none;
 }
+
 .navigation-link {
   display: flex;
  width: 294px;
@@ -205,22 +292,7 @@ ol[class] {
  padding: 0px;
 }
 
-/* обозначение на страницы в навигации - СТУДИЯ   */
-.studio-studio {
- display: flex;
- color: #2196f3 !important;
- flex-direction: column;
-}
-.studio-studio::after {
-  display: block;
-  content: "";
-  background-image: url(../svg/hover.svg);
-  width: 48px;
-  height: 4px;
-  margin-top: 29px;
-  border-radius: 2px;
-  
-}
+
 
 /* обозначение на страницы в навигации - ПОРТФОЛИО   */
 
@@ -244,23 +316,7 @@ ol[class] {
 
 
 
-/* стиль контактов в навигации ПЕРЕМЕСТИТЬ */
 
-.nav-contacts-box {
-  display:flex;
- 
-}
-
-.navigation-contacts {
-  display: flex;
-  padding: 0%;
- 
-}
-
-.navigation-contacts a {
-  color: var(--brand-grey);
-  text-decoration: none;
-}
 
 
 
@@ -529,16 +585,12 @@ transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   
 }
 
-.our-client-svg:hover,
-.our-client-svg:focus {
-  border-color: #2196f3;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
 .our-client-svg:hover,
 .our-client-svg:focus {
+  border-color: var(--brand-color);
   fill: #2196f3;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 2500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
